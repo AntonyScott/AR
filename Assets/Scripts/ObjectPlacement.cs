@@ -19,13 +19,12 @@ public class ObjectPlacement : MonoBehaviour
     private ARRaycastManager arRaycastManager;
 
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
-    private GameObject prefabName;
 
     public GameObject Xbox360;
     public GameObject XboxOne;
     public GameObject XboxSeriesX;
 
-    private State gameState;
+    /*private State gameState;*/
 
     void Awake()
     {
@@ -37,11 +36,12 @@ public class ObjectPlacement : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(gameState);
+        //Debug.Log(gameState);
         if (placedPrefab == null)
         {
             return;
         }
+
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -70,7 +70,7 @@ public class ObjectPlacement : MonoBehaviour
                 {
                     Debug.Log(" arraycast");
                     var hitPose = hits[0].pose;
-                    if(gameState == State.Xbox360)
+                    /*if(gameState == State.Xbox360)
                     {
                         Instantiate(Xbox360, hitPose.position, hitPose.rotation);
                     }
@@ -81,21 +81,30 @@ public class ObjectPlacement : MonoBehaviour
                     if (gameState == State.XboxSeriesX)
                     {
                         Instantiate(XboxSeriesX, hitPose.position, hitPose.rotation);
-                    }
+                    }*/
+                    Instantiate(placedPrefab, hitPose.position, hitPose.rotation);
+
                 }
             }
         }
     }
 
-    private enum State
+    /*private enum State
     {
         Xbox360,
         XboxOne,
         XboxSeriesX
-    }
+    }*/
 
-        void ChangePrefabTo(string prefabName)
+    void ChangePrefabTo(string prefabName)
+    {
+        placedPrefab = Resources.Load<GameObject>($"{prefabName}");
+
+        if (placedPrefab == null)
         {
+            Debug.LogError($"Prefab with {prefabName} could not be loaded, make sure you check the naming of prefabs");
+        }
+
         Color colBtn1 = xbox360Btn.image.color;
         Color colBtn2 = xboxOneBtn.image.color;
         Color colBtn3 = xboxSeriesBtn.image.color;
@@ -106,21 +115,27 @@ public class ObjectPlacement : MonoBehaviour
                 colBtn1.a = 1f;
                 colBtn2.a = 0.5f;
                 colBtn3.a = 0.5f;
-                gameState = State.Xbox360;
+                //gameState = State.Xbox360;
+                Debug.Log("Xbox 360");
+                //placedPrefab = Xbox360;
                 break;
 
             case "Xbox One":
                 colBtn1.a = 0.5f;
                 colBtn2.a = 1f;
                 colBtn3.a = 0.5f;
-                gameState = State.XboxOne;
+                //gameState = State.XboxOne;
+                //placedPrefab = XboxOne;
+                Debug.Log("Xbox One");
                 break;
 
             case "Xbox Series X":
                 colBtn1.a = 0.5f;
                 colBtn2.a = 0.5f;
                 colBtn3.a = 1f;
-                gameState = State.XboxSeriesX;
+                //gameState = State.XboxSeriesX;
+                //placedPrefab = XboxSeriesX;
+                Debug.Log("Xbox Series X");
                 break;
         }
 

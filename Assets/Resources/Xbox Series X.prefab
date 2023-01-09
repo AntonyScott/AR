@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &305295790827543164
+--- !u!1 &3545317714194789876
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1114482903997399238}
-  - component: {fileID: 4096212833867255651}
-  - component: {fileID: 2250775718681983913}
-  - component: {fileID: -8610424208717583381}
-  - component: {fileID: 8624032407295958750}
+  - component: {fileID: 4213309873469435726}
+  - component: {fileID: 997394023750934763}
+  - component: {fileID: 3040919160442147873}
+  - component: {fileID: 1097392691560097080}
+  - component: {fileID: 223789864463883932}
   m_Layer: 0
-  m_Name: Xbox One
+  m_Name: Xbox Series X
   m_TagString: Xbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1114482903997399238
+  m_IsActive: 1
+--- !u!4 &4213309873469435726
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305295790827543164}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 3545317714194789876}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
+  m_LocalPosition: {x: -0, y: 1.9165508, z: 0}
+  m_LocalScale: {x: 5.625, y: 5.625001, z: 11.250002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!33 &4096212833867255651
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+--- !u!33 &997394023750934763
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305295790827543164}
-  m_Mesh: {fileID: -9193669339889350653, guid: 76f77614ab5f50445ba47f62702c35a5, type: 3}
---- !u!23 &2250775718681983913
+  m_GameObject: {fileID: 3545317714194789876}
+  m_Mesh: {fileID: -5495902117074765545, guid: abb68ec9f2ffbf54897ce3766024f183, type: 3}
+--- !u!23 &3040919160442147873
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305295790827543164}
+  m_GameObject: {fileID: 3545317714194789876}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -63,10 +63,13 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9a2bb452002d45c44960b45604f7ed08, type: 2}
-  - {fileID: 2100000, guid: 0695b0bbd7477914f923230b729dc424, type: 2}
-  - {fileID: 2100000, guid: 7c22d1f81dc249f4696ba0c7acbd58ce, type: 2}
-  - {fileID: 2100000, guid: ccfe549d978d2ae438d8b5b78b041d9c, type: 2}
+  - {fileID: 2100000, guid: 94251a684f29bd94b9f37ae0c1bce677, type: 2}
+  - {fileID: 2100000, guid: 8f95286854ed0944a9180564691032be, type: 2}
+  - {fileID: 2100000, guid: 97618f9e540d70448a936126d75b9425, type: 2}
+  - {fileID: 2100000, guid: dff6f10615f82ff43bbd8d4bb6c07e42, type: 2}
+  - {fileID: 2100000, guid: 8e0d9afddedb6a94bbfa4da5c1695241, type: 2}
+  - {fileID: 2100000, guid: 4d030d614356fb3499cdfdd525430dae, type: 2}
+  - {fileID: 2100000, guid: 11b7cb27cfe908846af69ec675e0d569, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,13 +91,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-8610424208717583381
+--- !u!114 &1097392691560097080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305295790827543164}
+  m_GameObject: {fileID: 3545317714194789876}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc7c91b26689a054d88448aba6dfe424, type: 3}
@@ -109,13 +112,13 @@ MonoBehaviour:
   axis: {x: 0, y: -1, z: 0}
   space: 1
   sensitivity: 1
---- !u!114 &8624032407295958750
+--- !u!114 &223789864463883932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305295790827543164}
+  m_GameObject: {fileID: 3545317714194789876}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4eda371e5375f454490a86f21559ee38, type: 3}
