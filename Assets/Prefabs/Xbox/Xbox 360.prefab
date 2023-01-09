@@ -10472,7 +10472,7 @@ GameObject:
   - component: {fileID: 7096084367443091370}
   m_Layer: 0
   m_Name: Xbox 360
-  m_TagString: Untagged
+  m_TagString: Xbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10903,7 +10903,7 @@ MonoBehaviour:
   Use:
     Filter: 0
     IgnoreStartedOverGui: 1
-    RequiredFingerCount: 0
+    RequiredFingerCount: 2
     RequiredMouseButtons: 0
     RequiredSelectable: {fileID: 0}
   axis: {x: 0, y: -1, z: 0}

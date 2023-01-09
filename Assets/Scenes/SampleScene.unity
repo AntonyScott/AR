@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -520,6 +520,9 @@ MonoBehaviour:
   xbox360Btn: {fileID: 38900384}
   xboxOneBtn: {fileID: 1367705476}
   xboxSeriesBtn: {fileID: 551228114}
+  Xbox360: {fileID: 2597593693176362832, guid: 4dcb5372242f4d9489b96282a8ef57e8, type: 3}
+  XboxOne: {fileID: 305295790827543164, guid: 490abb52ca556e146a60a079bbaa884d, type: 3}
+  XboxSeriesX: {fileID: 1495484350733467339, guid: 675f6735d312fcc4a9cd4530f02c6508, type: 3}
 --- !u!1 &476159808
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1699192479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2217,6 +2220,7 @@ GameObject:
   - component: {fileID: 2079505123}
   - component: {fileID: 2079505122}
   - component: {fileID: 2079505121}
+  - component: {fileID: 2079505127}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -2366,3 +2370,60 @@ Transform:
   m_Father: {fileID: 271675358}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2079505127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079505119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fadf230d1919748a9aa21d40f74619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackingType: 0
+  m_UpdateType: 0
+  m_PositionInput:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Position Input
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 938553bd-de8f-417b-809c-d42549e24ea4
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RotationInput:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Rotation Input
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: c8d57220-f72d-4c4e-8553-fb0750619978
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_PositionAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  m_RotationAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  m_HasMigratedActions: 1

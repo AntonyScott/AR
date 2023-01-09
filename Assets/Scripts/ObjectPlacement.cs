@@ -21,6 +21,12 @@ public class ObjectPlacement : MonoBehaviour
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     private GameObject prefabName;
 
+    public GameObject Xbox360;
+    public GameObject XboxOne;
+    public GameObject XboxSeriesX;
+
+    private State gameState;
+
     void Awake()
     {
         arRaycastManager = GetComponent<ARRaycastManager>();
@@ -31,6 +37,7 @@ public class ObjectPlacement : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(gameState);
         if (placedPrefab == null)
         {
             return;
@@ -51,7 +58,7 @@ public class ObjectPlacement : MonoBehaviour
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
                 RaycastHit hit;
 
-                if (Physics.Raycast(ray, out hit) && (hit.transform.tag == "knight"))
+                if (Physics.Raycast(ray, out hit) && (hit.transform.tag == "Xbox"))
                 {
                     Debug.Log(" raycast");
                     if (Input.GetTouch(0).deltaTime > 0.2f)
@@ -63,21 +70,32 @@ public class ObjectPlacement : MonoBehaviour
                 {
                     Debug.Log(" arraycast");
                     var hitPose = hits[0].pose;
-                    Instantiate(placedPrefab, hitPose.position, hitPose.rotation);
+                    if(gameState == State.Xbox360)
+                    {
+                        Instantiate(Xbox360, hitPose.position, hitPose.rotation);
+                    }
+                    if (gameState == State.XboxOne)
+                    {
+                        Instantiate(XboxOne, hitPose.position, hitPose.rotation);
+                    }
+                    if (gameState == State.XboxSeriesX)
+                    {
+                        Instantiate(XboxSeriesX, hitPose.position, hitPose.rotation);
+                    }
                 }
             }
         }
     }
 
-        void ChangePrefabTo(string prefabName)
+    private enum State
     {
-        placedPrefab = Resources.Load<GameObject>($"prefabs/xbox/{prefabName}");
+        Xbox360,
+        XboxOne,
+        XboxSeriesX
+    }
 
-        if (placedPrefab == null)
+        void ChangePrefabTo(string prefabName)
         {
-            Debug.LogError($"Prefab with name {prefabName} could not be loaded, make sure you check the naming of your prefabs...");
-        }
-
         Color colBtn1 = xbox360Btn.image.color;
         Color colBtn2 = xboxOneBtn.image.color;
         Color colBtn3 = xboxSeriesBtn.image.color;
@@ -88,18 +106,21 @@ public class ObjectPlacement : MonoBehaviour
                 colBtn1.a = 1f;
                 colBtn2.a = 0.5f;
                 colBtn3.a = 0.5f;
+                gameState = State.Xbox360;
                 break;
 
             case "Xbox One":
                 colBtn1.a = 0.5f;
                 colBtn2.a = 1f;
                 colBtn3.a = 0.5f;
+                gameState = State.XboxOne;
                 break;
 
-            case "Xbox Series":
+            case "Xbox Series X":
                 colBtn1.a = 0.5f;
                 colBtn2.a = 0.5f;
                 colBtn3.a = 1f;
+                gameState = State.XboxSeriesX;
                 break;
         }
 
