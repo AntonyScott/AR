@@ -59,8 +59,7 @@ public class ObjectPlacement : MonoBehaviour
                         Destroy(hit.transform.gameObject);
                     }
                 }
-                else if (!isOverUI && arRaycastManager.Raycast(touchPosition, hits,
-               UnityEngine.XR.ARSubsystems.TrackableType.Planes))
+                else if (!isOverUI && arRaycastManager.Raycast(touchPosition, hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes))
                 {
                     Debug.Log(" arraycast");
                     var hitPose = hits[0].pose;

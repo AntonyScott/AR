@@ -10469,7 +10469,6 @@ GameObject:
   - component: {fileID: 3406780837019135466}
   - component: {fileID: 7096084367443091368}
   - component: {fileID: 7096084367443091367}
-  - component: {fileID: 7096084367443091369}
   - component: {fileID: 7096084367443091370}
   m_Layer: 0
   m_Name: Xbox 360
@@ -10477,7 +10476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3406780837019135466
 Transform:
   m_ObjectHideFlags: 0
@@ -10910,18 +10909,6 @@ MonoBehaviour:
   axis: {x: 0, y: -1, z: 0}
   space: 1
   sensitivity: 1
---- !u!114 &7096084367443091369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2597593693176362832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff14d8890604cd4bb50a27534483f07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7096084367443091370
 MonoBehaviour:
   m_ObjectHideFlags: 0
