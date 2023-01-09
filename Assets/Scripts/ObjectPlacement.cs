@@ -18,18 +18,15 @@ public class ObjectPlacement : MonoBehaviour
     private GameObject placedPrefab;
     private ARRaycastManager arRaycastManager;
 
-    private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
-
     public GameObject Xbox360;
-    public GameObject XboxOne;
-    public GameObject XboxSeriesX;
 
-    /*private State gameState;*/
+    private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     void Awake()
     {
         arRaycastManager = GetComponent<ARRaycastManager>();
 
+        ChangePrefabTo("Xbox 360");
         xbox360Btn.onClick.AddListener(() => ChangePrefabTo("Xbox 360"));
         xboxOneBtn.onClick.AddListener(() => ChangePrefabTo("Xbox One"));
         xboxSeriesBtn.onClick.AddListener(() => ChangePrefabTo("Xbox Series X"));
@@ -70,31 +67,12 @@ public class ObjectPlacement : MonoBehaviour
                 {
                     Debug.Log(" arraycast");
                     var hitPose = hits[0].pose;
-                    /*if(gameState == State.Xbox360)
-                    {
-                        Instantiate(Xbox360, hitPose.position, hitPose.rotation);
-                    }
-                    if (gameState == State.XboxOne)
-                    {
-                        Instantiate(XboxOne, hitPose.position, hitPose.rotation);
-                    }
-                    if (gameState == State.XboxSeriesX)
-                    {
-                        Instantiate(XboxSeriesX, hitPose.position, hitPose.rotation);
-                    }*/
                     Instantiate(placedPrefab, hitPose.position, hitPose.rotation);
 
                 }
             }
         }
     }
-
-    /*private enum State
-    {
-        Xbox360,
-        XboxOne,
-        XboxSeriesX
-    }*/
 
     void ChangePrefabTo(string prefabName)
     {
@@ -115,17 +93,14 @@ public class ObjectPlacement : MonoBehaviour
                 colBtn1.a = 1f;
                 colBtn2.a = 0.5f;
                 colBtn3.a = 0.5f;
-                //gameState = State.Xbox360;
                 Debug.Log("Xbox 360");
-                //placedPrefab = Xbox360;
+                //Instantiate(Xbox360, Vector3.zero, Quaternion.identity);
                 break;
 
             case "Xbox One":
                 colBtn1.a = 0.5f;
                 colBtn2.a = 1f;
                 colBtn3.a = 0.5f;
-                //gameState = State.XboxOne;
-                //placedPrefab = XboxOne;
                 Debug.Log("Xbox One");
                 break;
 
@@ -133,8 +108,6 @@ public class ObjectPlacement : MonoBehaviour
                 colBtn1.a = 0.5f;
                 colBtn2.a = 0.5f;
                 colBtn3.a = 1f;
-                //gameState = State.XboxSeriesX;
-                //placedPrefab = XboxSeriesX;
                 Debug.Log("Xbox Series X");
                 break;
         }
