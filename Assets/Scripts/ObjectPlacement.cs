@@ -104,7 +104,7 @@ public class ObjectPlacement : MonoBehaviour
                     }
                     if (placedPrefab == Resources.Load<GameObject>($"Xbox Series X"))
                     {
-                        Quaternion rot = Quaternion.Euler(-90, 0, 0);
+                        Quaternion rot = Quaternion.Euler(-90, 180, 0);
 
                         FindObjectOfType<AudioManager>().Play("xboxSeriesX");
 
